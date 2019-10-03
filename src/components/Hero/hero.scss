@@ -1,0 +1,80 @@
+@import '../../base/base';
+
+.hero {
+    position: relative;
+    height: 100%;
+}
+
+.hero__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
+}
+
+.hero__media-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: $size-20;
+    background-color: $color-gray;
+
+    &:before {
+        content: '';
+        display: block;
+        padding-bottom: 47.25%;
+        height: 100%;
+    }
+
+    @include breakpoint ($s) {
+        margin-bottom: 0;
+    }
+}
+
+.hero__content-wrapper {
+    top: 50%;
+    left: 35px;
+    text-align: left;
+    background-color: transparent;
+    width: 76%;
+    position: absolute;
+    padding: 0;
+
+    @include breakpoint ($m) {
+        left: 140px;  
+    }
+}
+
+.hero__title {
+    font-size: $size-22;
+    color: $color-black;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin: 0 0 $size-16;
+
+    @include breakpoint ($s) {
+        color: $color-white;
+        letter-spacing: 1.5px;
+    }
+
+    @include breakpoint ($m) {
+        font-size: 53px;
+    }
+}
+
+.hero__content {
+    color: $color-black;
+    font-size: $size-14;
+
+    @include breakpoint ($s) {
+        color: $color-white;
+    }
+
+    @include breakpoint ($m) {
+        font-size: $size-18;
+    }
+}

@@ -1,0 +1,51 @@
+.grid-container {
+    font-size: 0;
+    padding: 0px 22px 71px 38px;
+
+    @include breakpoint($s) {
+        padding-bottom: 58px;
+    }
+}
+
+.grid-container--flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.col {
+    padding-bottom: $size-16;
+    padding-right: 16px;
+    font-size: $size-16;
+    display: inline-block;
+    vertical-align: top;
+
+    @include breakpoint($s) {
+        padding-right: $size-16;
+        padding-bottom: $size-16;
+    }
+
+    &--4 {
+        width: percentage(4 / 12);
+    }
+
+    &--6 {
+        width: percentage(6 / 12);
+    }
+
+    &--12 {
+        width: percentage(12 / 12);
+    }
+
+    @include breakpoint($s) {
+        &--s-6 {
+            width: percentage(6 / 12);
+        }
+    }
+
+    @include breakpoint($m) {
+        &--m-4 {
+            width: percentage(4 / 12);
+        }
+    }
+}

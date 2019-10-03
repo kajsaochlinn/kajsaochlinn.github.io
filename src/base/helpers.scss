@@ -1,0 +1,5 @@
+.h-hidden-m-up {
+    @include breakpoint($m) {
+        display: none !important;
+    }
+}

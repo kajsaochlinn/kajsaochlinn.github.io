@@ -1,0 +1,23 @@
+@import '../../base/base';
+
+.section {
+    background-color: $color-gray-light;
+
+    .section + & {
+        .section__inner {
+            padding-top: 0;
+        }
+    }
+}
+
+.section__inner {
+    padding: $size-35; 
+
+    @include breakpoint ($m) {
+        padding:  100px 100px  100px 140px;  
+    }
+}
+
+.section__title {
+    margin-bottom: 20px;
+}
